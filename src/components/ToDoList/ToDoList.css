@@ -1,0 +1,10 @@
+/* ToDoList.css */
+
+.completed-task-list {
+    margin-top: 20px;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #888888;
+}

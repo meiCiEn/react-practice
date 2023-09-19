@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    /* border: 2px solid #fff; */
+    border-radius: 6px;
+}
+
+/* front of card - picture */
+.card .front {
+    /* front of card hidden by default (flipped 90deg along Y axis) */
+    transform: rotateY(90deg); 
+    transition: transform ease-in 0.2s;
+    position: absolute;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+
+
+.flipped .front {
+    /* rotate front image back to 0deg so you can see it */
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+/* back of card - cover */
+.card .back {
+    transition: transform 0.2s ease-in 0.2s, box-shadow 0.3s ease-in-out 0s;
+
+    box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card .back:hover {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.flipped .back {
+    /* when card is flipped rotate 90deg along y axis
+    so the back doesn't show on the page */
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}

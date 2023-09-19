@@ -1,0 +1,23 @@
+.calc-button{
+  border: none;
+  background-color: rgb(79 70 229);
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.calc-button:hover {
+  background-color: rgb(55 48 163);
+}
+
+.equals {
+  grid-column: 3 / 5;
+  background-color: rgb(249 115 22);
+}
+
+.equals:hover {
+  background-color: rgb(194 65 12);
+}

@@ -1,0 +1,44 @@
+label {
+    color: rgb(255 255 255);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.numberSelect {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.numberSelectBox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the icon container */
+.icon-container {
+    display: inline-block; /* Ensure inline-block for positioning */
+    position: relative; /* Required for absolute positioning of the SVG groups */
+  }
+  
+  /* Apply the initial styles to the SVG groups */
+  .icon-container #house_background,
+  .icon-container #house_outline {
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  /* Define the hover styles for the "house_background" when hovering over the parent li */
+  li:hover .icon-container #house_background {
+    transform: translate(3px, 3px); /* Move 3 pixels down and to the right */
+  }
+  
+  /* Define the hover styles for the "house_outline" when hovering over the parent li */
+  li:hover .icon-container #house_outline {
+    transform: translate(-3px, -3px); /* Move 3 pixels up and to the left */
+  }
