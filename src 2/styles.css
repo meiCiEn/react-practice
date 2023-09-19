@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.typewriter-text {
+    font-family: 'Special Elite', sans-serif;
+}

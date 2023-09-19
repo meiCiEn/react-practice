@@ -1,0 +1,5 @@
+.buttonBox {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}

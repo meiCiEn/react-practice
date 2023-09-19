@@ -1,0 +1,86 @@
+.blob-wrapper {
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/* overflow: hidden; */
+	position: relative;
+  z-index: -1;
+}
+
+.blob {
+	background:linear-gradient(to top, #c7d2fe 0%, #ddd6fe 60%,  #e9d5ff 100%);
+  border-radius: 37% 50% 25% 30%;
+  position: absolute;
+  opacity:.7;
+}
+
+.blob.one {
+	height: calc((15vw) + 100px);
+	width: calc((15vw) + 100px);
+	left: 44vw;
+	top: 60%;
+  animation: 
+  transform 20s ease-in-out infinite both alternate,
+  movement_one 40s ease-in-out infinite both;
+}
+
+.blob.two {
+	height: calc((40vw) + 100px);
+	width: calc((40vw) + 100px);
+	left: -20vw;
+  top: 70px;
+	
+	transform: rotate(-140deg);
+  /* infinite loop with an alternate direction for each iteration */
+	animation: transform 30s ease-in-out infinite both alternate, movement_two 60s ease-in-out infinite both;
+}
+
+@media (min-width: 640px)
+{
+  .blob.two {
+    top: -150px;
+  }
+}
+
+.blob.three{
+	height: calc((25vw) + 100px);
+	width: calc((25vw) + 100px);
+	left: 60vw;
+	top: -150px;
+	transform: rotate(-200deg);
+	animation: transform 30s ease-in-out infinite both alternate, movement_two 60s ease-in-out infinite both;
+}
+
+
+
+
+/* Changing border radius creates morphing effet on the blob's shape */
+@keyframes transform
+{
+    0%,
+  100% { border-radius: 33% 67% 70% 20% / 30% 30% 70% 70%; } 
+   20% { border-radius: 32% 63% 48% 52% / 37% 65% 35% 63%; } 
+   40% { border-radius: 36% 64% 64% 33% / 64% 48% 52% 33%; } 
+   60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%; } 
+   80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; } 
+}
+
+
+@keyframes movement_one
+/* transform blob's position and scale to create movement */
+{
+    0%,
+  100% { transform: none; }
+   50% { transform: translate(50%, 20%) rotateY(10deg) scale(1.2); }
+}
+
+@keyframes movement_two
+{
+    0%,
+  500% { transform: none; }
+   50% { transform: translate(40%, 20%) rotate(-200deg) scale(1.2);}
+}
+
